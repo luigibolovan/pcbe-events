@@ -1,0 +1,49 @@
+sistemul
+    - lista cu toate stirile (baza de date wannabe)
+    - metode(editori): post, update, delete, find
+
+    1. post -> eventbus.post(new Stire)
+    2. update -> {
+        find(id)
+        update-ul efectiv => stirea are metoda de update
+        eventbus.post(aceeasi stire)
+    }
+    3. delete -> {
+        find(id)
+        sterge continut => stirea are metoda de delete
+        eventbus.post(aceeasi stire, de data asta fara continut)
+    }
+    4. find -> {
+        stirile din sistem au un id pe care il cautam => stirea are metoda de getID
+    }
+
+    - metode(clienti): register
+
+    1.register -> {
+        static_var_no_of_subscribers ++ ***discutii***
+        eventbus.register(cititor.type)
+    }
+
+Clientii
+    - apeleaza register 
+    - au o metoda care are ca anotare @Subscribe. aceasta metoda se va apela cand apare un nou eveniment de tipul(sau subtipul) parametrului pe care il primeste metoda
+
+Editorii
+    - apeleaza metodele de post, update, delete
+
+Stirile
+    - atribute:
+        - editor
+        - data publicarii / modificarii
+        - continut
+        - id -> static (se incrementeaza la instantiere pentru a genera id-uri)
+    - metode: update, delete, getID
+    
+    update -> {
+        update data
+        update continut
+    }
+
+    delete -> {
+        atributele -> null
+    }
