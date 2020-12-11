@@ -41,6 +41,13 @@ public class News {
         this.lastModificationDate = LocalDateTime.now();
     }
 
+    public void delete(){
+        this.editor = null;
+        this.content = null;
+        this.dateOfPublishing = null;
+        this.lastModificationDate = LocalDateTime.now();
+    }
+
     public static int getInstanceCount() {
         return instanceCount;
     }

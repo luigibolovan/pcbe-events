@@ -8,17 +8,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MultiHandlerSubscriber {
-    List<News> newsEvents = new ArrayList<News>();
-    List<SportsNews> sportsNewsEvents = new ArrayList<SportsNews>();
-
+    private List<News> newsEvents = new ArrayList<News>();
 
     public MultiHandlerSubscriber(EventBus eventBus){
         eventBus.register(this);
-    }
-
-    @Subscribe
-    public void handleSportNewsEvents(SportsNews event){
-        sportsNewsEvents.add(event);
     }
 
     @Subscribe
@@ -26,4 +19,7 @@ public class MultiHandlerSubscriber {
         newsEvents.add(event);
     }
 
+    public List<News> getNewsEvents() {
+        return newsEvents;
+    }
 }
