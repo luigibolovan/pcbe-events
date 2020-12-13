@@ -5,7 +5,7 @@ import Editors.Editor;
 import java.time.LocalDateTime;
 
 
-public class News {
+public abstract class News {
 
     private static int instanceCount = 0;
     private int id;
@@ -20,6 +20,8 @@ public class News {
         this.content = content;
         this.dateOfPublishing = LocalDateTime.now();
         this.lastModificationDate = LocalDateTime.now();
+
+        editor.addNewsToEditorList(this);
     }
 
     public void getNewsInfo(){
