@@ -50,6 +50,7 @@ public abstract class Topic {
     protected boolean isNew() {
         return creationDate.equals(lastModifiedDate);
     }
+
     public void printInfo() {
         System.out.println();
         System.out.println("----------------------------------------");

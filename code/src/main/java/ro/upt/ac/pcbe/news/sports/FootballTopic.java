@@ -11,7 +11,7 @@ public class FootballTopic extends SportsTopic {
     }
 
     @Override
-    public int getInterest(){
+    public int getInterest() {
         return interestedInThisTopic;
     }
 

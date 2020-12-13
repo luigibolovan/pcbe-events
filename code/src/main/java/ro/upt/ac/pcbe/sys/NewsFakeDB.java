@@ -19,9 +19,9 @@ class NewsFakeDB {
     }
 
     Topic findTopicByID(int id) {
-        for(Topic t : topics) {
+        for (Topic t : topics) {
             if (id == t.getID()) {
-               return t;
+                return t;
             }
         }
         return null;

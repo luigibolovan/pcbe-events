@@ -7,16 +7,15 @@ import ro.upt.ac.pcbe.subscribers.Registrable;
 public class NewsSys {
     private final EventBus mNewsDispatcher;
     private NewsFakeDB mNewsDB;
-
-    public int getNoOfSubscribers() {
-        return noOfSubscribers;
-    }
-
     private int noOfSubscribers;
 
     public NewsSys() {
         this.mNewsDB = new NewsFakeDB();
         this.mNewsDispatcher = new EventBus("News Dispatcher");
+    }
+
+    public int getNoOfSubscribers() {
+        return noOfSubscribers;
     }
 
     public void newTopic(Topic topic) {
