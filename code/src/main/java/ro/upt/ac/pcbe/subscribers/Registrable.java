@@ -2,10 +2,10 @@ package ro.upt.ac.pcbe.subscribers;
 
 import ro.upt.ac.pcbe.sys.NewsSys;
 
-public class Registerable {
+public class Registrable {
     protected NewsSys sys;
 
-    public Registerable(NewsSys sys) {
+    public Registrable(NewsSys sys) {
         this.sys = sys;
     }
 

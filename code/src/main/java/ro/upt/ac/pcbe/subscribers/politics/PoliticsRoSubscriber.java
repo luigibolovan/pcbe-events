@@ -2,9 +2,10 @@ package ro.upt.ac.pcbe.subscribers.politics;
 
 import com.google.common.eventbus.Subscribe;
 import ro.upt.ac.pcbe.news.politics.PoliticsRo;
+import ro.upt.ac.pcbe.subscribers.Registrable;
 import ro.upt.ac.pcbe.sys.NewsSys;
 
-public class PoliticsRoSubscriber extends PoliticsSubscriber {
+public class PoliticsRoSubscriber extends Registrable {
 
     public PoliticsRoSubscriber(NewsSys sys) {
         super(sys);

@@ -2,11 +2,10 @@ package ro.upt.ac.pcbe.subscribers.sports;
 
 import com.google.common.eventbus.Subscribe;
 import ro.upt.ac.pcbe.news.sports.FootballTopic;
-import ro.upt.ac.pcbe.subscribers.Registerable;
-import ro.upt.ac.pcbe.subscribers.sports.SportsSubscriber;
+import ro.upt.ac.pcbe.subscribers.Registrable;
 import ro.upt.ac.pcbe.sys.NewsSys;
 
-public class FootballSubscriber extends Registerable {
+public class FootballSubscriber extends Registrable {
 
     public FootballSubscriber(NewsSys sys) {
         super(sys);

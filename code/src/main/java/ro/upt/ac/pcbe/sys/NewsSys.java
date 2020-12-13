@@ -1,9 +1,8 @@
 package ro.upt.ac.pcbe.sys;
 
 import com.google.common.eventbus.EventBus;
-import com.google.common.eventbus.Subscribe;
 import ro.upt.ac.pcbe.news.Topic;
-import ro.upt.ac.pcbe.subscribers.Registerable;
+import ro.upt.ac.pcbe.subscribers.Registrable;
 
 public class NewsSys {
     private final EventBus mNewsDispatcher;
@@ -39,13 +38,13 @@ public class NewsSys {
         mNewsDispatcher.post(mNewsDB.findTopicByID(id));
     }
 
-    public void registerSubscriber(Registerable sub) {
+    public void registerSubscriber(Registrable sub) {
         mNewsDispatcher.register(sub);
         noOfSubscribers++;
     }
 
-    public void unregisterSubscriber(Registerable registerable) {
-        mNewsDispatcher.unregister(registerable);
+    public void unregisterSubscriber(Registrable registrable) {
+        mNewsDispatcher.unregister(registrable);
         noOfSubscribers--;
     }
 }
