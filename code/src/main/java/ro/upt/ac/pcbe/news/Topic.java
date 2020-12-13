@@ -61,4 +61,8 @@ public abstract class Topic {
         System.out.println("----------------------------------------");
         System.out.println();
     }
+
+    public abstract void notifyInterest();
+
+    public abstract int getInterest();
 }

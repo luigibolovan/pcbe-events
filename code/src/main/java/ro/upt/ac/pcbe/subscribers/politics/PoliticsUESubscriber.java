@@ -12,6 +12,9 @@ public class PoliticsUESubscriber extends PoliticsSubscriber {
 
     @Subscribe
     public void subscribeTo(PoliticsUE ueEvent) {
+        System.out.println("PoliticsUE topic received");
+        ueEvent.notifyInterest();
+        System.out.println("Interested in " + ueEvent.getClass().getName() + " : " + ueEvent.getInterest());
         ueEvent.printInfo();
     }
 }

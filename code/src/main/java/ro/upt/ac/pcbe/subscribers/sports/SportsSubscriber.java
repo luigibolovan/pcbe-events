@@ -14,7 +14,7 @@ public class SportsSubscriber extends Registerable {
     public void subscribeTo(SportsTopic sportTopic) {
         System.out.println("Sport topic received");
         sportTopic.notifyInterest();
-        System.out.println("Interested in this topic: " + sportTopic.getInterest());
+        System.out.println("Interested in " + sportTopic.getClass().getName() + " : " + sportTopic.getInterest());
         sportTopic.printInfo();
     }
 }

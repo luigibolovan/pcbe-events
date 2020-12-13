@@ -3,8 +3,6 @@ package ro.upt.ac.pcbe;
 import ro.upt.ac.pcbe.editors.NewsEditor;
 import ro.upt.ac.pcbe.news.sports.BasketballTopic;
 import ro.upt.ac.pcbe.news.sports.FootballTopic;
-import ro.upt.ac.pcbe.news.sports.SportsTopic;
-import ro.upt.ac.pcbe.subscribers.sports.BasktetballSubscriber;
 import ro.upt.ac.pcbe.subscribers.sports.FootballSubscriber;
 import ro.upt.ac.pcbe.subscribers.sports.SportsSubscriber;
 import ro.upt.ac.pcbe.sys.NewsSys;

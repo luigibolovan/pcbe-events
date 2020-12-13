@@ -12,6 +12,9 @@ public class TennisSubscriber extends SportsSubscriber{
 
     @Subscribe
     public void subscribeTo(TennisTopic tennis) {
+        System.out.println("Tennis topic received");
+        tennis.notifyInterest();
+        System.out.println("Interested in " + tennis.getClass().getName() + " : " + tennis.getInterest());
         tennis.printInfo();
     }
 }

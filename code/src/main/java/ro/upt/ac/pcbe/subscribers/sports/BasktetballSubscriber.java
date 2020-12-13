@@ -14,7 +14,7 @@ public class BasktetballSubscriber extends SportsSubscriber {
     public void subscribeTo(BasketballTopic basket) {
         System.out.println("Basketball topic received");
         basket.notifyInterest();
-        System.out.println("Interested in this topic: " + basket.getInterest());
+        System.out.println("Interested in " + basket.getClass().getName() + " : " + basket.getInterest());
         basket.printInfo();
     }
 }

@@ -12,6 +12,9 @@ public class PoliticsRoSubscriber extends PoliticsSubscriber {
 
     @Subscribe
     public void subscribeTo(PoliticsRo roEvent) {
+        System.out.println("PoliticsRO topic received");
+        roEvent.notifyInterest();
+        System.out.println("Interested in " + roEvent.getClass().getName() + " : " + roEvent.getInterest());
         roEvent.printInfo();
     }
 }

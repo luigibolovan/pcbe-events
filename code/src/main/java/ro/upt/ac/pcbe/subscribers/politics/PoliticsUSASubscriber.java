@@ -12,6 +12,9 @@ public class PoliticsUSASubscriber extends PoliticsSubscriber {
 
     @Subscribe
     public void subscribeTo(PoliticsUSA usaEvent) {
+        System.out.println("PoliticsUSA topic received");
+        usaEvent.notifyInterest();
+        System.out.println("Interested in " + usaEvent.getClass().getName() + " : " + usaEvent.getInterest());
         usaEvent.printInfo();
     }
 }
