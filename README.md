@@ -1,2 +1,5 @@
-# pcbe-events
-Event based project
+# Sistem de stiri
+### event-based programming project
+
+## Framework 
+ > Guava - EventBus
